@@ -1,0 +1,79 @@
+:root {
+  --bg-color: #2c2c2c;
+  --text-color: white;
+  --add-task-bg: #35843d;
+  --search-btn-bg: #4f4f4f;
+  --edit-btn-bg: #fbd300;
+  --del-btn-bg: #fb0000;
+}
+
+h1,
+form {
+  font-family: "Racing Sans One", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+header {
+  color: var(--text-color);
+  h1 {
+    position: relative;
+    display: inline-block;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 1px;
+      background-color: var(--text-color);
+      top: 50%;
+    }
+    &::before {
+      right: 110%;
+    }
+    &::after {
+      left: 110%;
+    }
+  }
+  i {
+    display: block;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+  }
+}
+
+form {
+  .inputTask {
+    border-bottom: 1px solid white;
+    padding-bottom: 25px;
+    button {
+      color: var(--text-color) !important;
+      background-color: var(--add-task-bg) !important;
+      border-radius: 5px;
+    }
+  }
+  .search {
+    button {
+      color: var(--text-color) !important;
+      background-color: var(--search-btn-bg) !important;
+    }
+  }
+}
+.task {
+  background-color: #222222;
+  border-radius: 5px;
+  button {
+    all: unset;
+    color: black;
+    padding: 5px 20px;
+    border-radius: 5px;
+  }
+  button:nth-child(1) {
+    background-color: var(--edit-btn-bg);
+  }
+  button:nth-child(2) {
+    background-color: var(--del-btn-bg);
+  }
+}
