@@ -88,5 +88,3 @@ function searchTasks(value) {
   }
   displayTasks(searchtask);
 }
-
-// console.log(updateBtn.contentEditable);
